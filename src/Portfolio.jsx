@@ -22,26 +22,28 @@ export default function Portfolio() {
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">Archyx AI</h3>
             <p className="text-sm text-muted-foreground">
-              a full-stack AI document management system using Python (FastAPI, LangChain, Celery) and Google Apps
+              Full-stack AI document management system that uses Python (FastAPI, LangChain, Celery) and Google Apps
 Script to automate classification, summarization, tagging, and organization of Google Drive documents.
             </p>
           </div>
           <div className="border p-4 rounded shadow">
-            <h3 className="text-xl font-medium">Portfolio Website</h3>
+            <h3 className="text-xl font-medium">First Response AI</h3>
             <p className="text-sm text-muted-foreground">
-              A personal website built using React and Tailwind CSS.
+              AI medical chatbot that uses LLMs via LangChain, enabling users to query healthcare
+information in natural language with context-aware responses.
             </p>
           </div>
           <div className="border p-4 rounded shadow">
-            <h3 className="text-xl font-medium">Login System</h3>
+            <h3 className="text-xl font-medium">Spring Boot API Service</h3>
             <p className="text-sm text-muted-foreground">
-              Java Spring Boot backend with file upload/download features.
+              REST API that uses Spring Boot and Java, leveraging dependency management with Maven
+for efficient build and version control
             </p>
           </div>
           <div className="border p-4 rounded shadow">
-            <h3 className="text-xl font-medium">Guessing Game (Scheme)</h3>
+            <h3 className="text-xl font-medium">Sweet Home Bakery</h3>
             <p className="text-sm text-muted-foreground">
-              Interactive command-line game built using Scheme.
+              Responsive website using HTML, CSS, and JavaScript to improve user expierence and accessibility.
             </p>
           </div>
         </div>
