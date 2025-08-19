@@ -7,7 +7,7 @@ export default function Portfolio() {
       <section className="text-center space-y-2">
         <h1 className="text-4xl font-bold">Waleed Alfar</h1>
         <p className="text-lg text-muted-foreground">
-          Computer Science Major • Software Developer • Problem Solver
+          Computer Science Major • Software Developer
         </p>
         <div className="flex justify-center gap-4 pt-2">
           <a href="mailto:contact@waleedalfar.com">📧</a>
@@ -20,9 +20,10 @@ export default function Portfolio() {
         <h2 className="text-2xl font-semibold mb-4">Projects</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="border p-4 rounded shadow">
-            <h3 className="text-xl font-medium">Workout Tracker App</h3>
+            <h3 className="text-xl font-medium">Archyx AI</h3>
             <p className="text-sm text-muted-foreground">
-              A C++/Qt app for tracking exercises, sets, and progress.
+              a full-stack AI document management system using Python (FastAPI, LangChain, Celery) and Google Apps
+Script to automate classification, summarization, tagging, and organization of Google Drive documents.
             </p>
           </div>
           <div className="border p-4 rounded shadow">
@@ -34,7 +35,7 @@ export default function Portfolio() {
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">Login System</h3>
             <p className="text-sm text-muted-foreground">
-              Java Spring Boot backend with file upload/download featured.
+              Java Spring Boot backend with file upload/download features.
             </p>
           </div>
           <div className="border p-4 rounded shadow">
