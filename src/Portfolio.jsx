@@ -75,7 +75,6 @@ for efficient build and version control
           <li>Flask</li>
           <li>Maven</li>
           <li>Tailwind CSS</li>
-          <li>HTML/CSS</li>
         </ul>
       </section>
     </main>
