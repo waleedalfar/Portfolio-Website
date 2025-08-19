@@ -21,7 +21,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">
-              <a href="https://github.com/2025-Arizona-Opportunity-Hack-Summer/GenZents-HeritageSquareFounda">Archyx AI</a>
+              <a href="https://github.com/2025-Arizona-Opportunity-Hack-Summer/GenZents-HeritageSquareFounda" target="_blank">Archyx AI</a>
               </h3>
             <p className="text-sm text-muted-foreground">
               Full-stack AI document management system that uses Python (FastAPI, LangChain, Celery) and Google Apps
@@ -30,7 +30,7 @@ Script to automate classification and organization of Google Drive documents.
           </div>
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">
-              <a href="https://github.com/waleedalfar/firstresponse-ai">First Response AI</a>
+              <a href="https://github.com/waleedalfar/firstresponse-ai" target="_blank">First Response AI</a>
               </h3>
             <p className="text-sm text-muted-foreground">
               AI medical chatbot that uses LLMs via LangChain, enabling users to query healthcare
@@ -39,7 +39,7 @@ information in natural language with context-aware responses.
           </div>
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">
-              <a href="https://github.com/waleedalfar/springboot-store">Spring Boot API Service</a>
+              <a href="https://github.com/waleedalfar/springboot-store" target="_blank">Spring Boot API Service</a>
               </h3>
             <p className="text-sm text-muted-foreground">
               REST API that uses Spring Boot and Java, leveraging dependency management with Maven
@@ -48,7 +48,7 @@ for efficient build and version control
           </div>
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">
-              <a href="https://sweet-home-bakery-website.vercel.app/">Sweet Home Bakery</a>
+              <a href="https://sweet-home-bakery-website.vercel.app/" target="_blank">Sweet Home Bakery</a>
               </h3>
             <p className="text-sm text-muted-foreground">
               Responsive website using HTML, CSS, and JavaScript to improve user expierence and accessibility.
