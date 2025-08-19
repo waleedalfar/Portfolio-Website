@@ -23,7 +23,7 @@ export default function Portfolio() {
             <h3 className="text-xl font-medium">Archyx AI</h3>
             <p className="text-sm text-muted-foreground">
               Full-stack AI document management system that uses Python (FastAPI, LangChain, Celery) and Google Apps
-Script to automate classification, summarization, tagging, and organization of Google Drive documents.
+Script to automate classification and organization of Google Drive documents.
             </p>
           </div>
           <div className="border p-4 rounded shadow">
@@ -52,26 +52,30 @@ for efficient build and version control
       <section>
         <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p className="text-muted-foreground">
-          I'm a Computer Science major at Arizona State University with a passion
+          I'm a Computer Science major and Undergraduate Teaching Assistant at Arizona State University with a passion
           for software development, especially in data-driven applications and
           user-centered design. I enjoy building solutions that solve real-world
-          problems and am currently seeking opportunities in software engineering
-          or data analytics.
+          problems and am currently seeking opportunities in software engineering.
+          
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">Skills</h2>
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 list-disc list-inside text-muted-foreground">
+          <li>Javascript</li>
+          <li>Python</li>
           <li>C++</li>
           <li>Java</li>
           <li>React</li>
-          <li>Python</li>
           <li>SQL</li>
           <li>Spring Boot</li>
-          <li>Git & GitHub</li>
+          <li>LangChain</li>
+          <li>FastAPI</li>
+          <li>Flask</li>
+          <li>Maven</li>
           <li>Tailwind CSS</li>
-          <li>Qt</li>
+          <li>HTML/CSS</li>
         </ul>
       </section>
     </main>
