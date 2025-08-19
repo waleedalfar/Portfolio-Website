@@ -12,7 +12,7 @@ export default function Portfolio() {
         <div className="flex justify-center gap-4 pt-2">
           <a href="mailto:contact@waleedalfar.com">📧</a>
           <a href="https://github.com/waleedalfar" target="_blank">🔗</a>
-          <a href="/WaleedAlfar_Resume.pdf" target="_blank">📄</a>
+          <a href="/Waleed_s_Resume_1.pdf" target="_blank">📄</a>
         </div>
       </section>
 
