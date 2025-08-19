@@ -17,7 +17,7 @@ export default function Portfolio() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <h2 className="text-2xl font-semibold mb-4" href="https://github.com/waleedalfar">Projects</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">Archyx AI</h3>
