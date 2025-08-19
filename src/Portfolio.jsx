@@ -34,7 +34,7 @@ export default function Portfolio() {
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">Login System</h3>
             <p className="text-sm text-muted-foreground">
-              Java Spring Boot backend with file upload/download features.
+              Java Spring Boot backend with file upload/download featured.
             </p>
           </div>
           <div className="border p-4 rounded shadow">
