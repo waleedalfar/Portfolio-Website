@@ -21,7 +21,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">
-              <a href="https://github.com/2025-Arizona-Opportunity-Hack-Summer/GenZents-HeritageSquareFounda" target="_blank">Archyx AI</a>
+              <a href="https://github.com/2025-Arizona-Opportunity-Hack-Summer/GenZents-HeritageSquareFounda" target="_blank">Waleed Alfar</a>
               </h3>
             <p className="text-sm text-muted-foreground">
               Full-stack AI document management system that uses Python (FastAPI, LangChain, Celery) and Google Apps
