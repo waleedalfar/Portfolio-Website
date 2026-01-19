@@ -21,11 +21,10 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="border p-4 rounded shadow">
             <h3 className="text-xl font-medium">
-              <a href="https://github.com/2025-Arizona-Opportunity-Hack-Summer/GenZents-HeritageSquareFounda" target="_blank">Waleed Alfar</a>
+              <a href="https://github.com/2025-Arizona-Opportunity-Hack-Summer/GenZents-HeritageSquareFounda" target="_blank">The Trim App</a>
               </h3>
             <p className="text-sm text-muted-foreground">
-              Full-stack AI document management system that uses Python (FastAPI, LangChain, Celery) and Google Apps
-Script to automate classification and organization of Google Drive documents.
+              Engineered a RESTful backend via FastAPI \& PostgreSQL for efficient management of user accounts and service listings
             </p>
           </div>
           <div className="border p-4 rounded shadow">
