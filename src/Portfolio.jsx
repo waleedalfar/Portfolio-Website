@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   return (
@@ -13,6 +13,7 @@ export default function Portfolio() {
           <a href="mailto:contact@waleedalfar.com">📧</a>
           <a href="https://github.com/waleedalfar" target="_blank">🔗</a>
           <a href="/WaleedAlfar(1).pdf" target="_blank">📄</a>
+          <Link to="/study" title="Study Timer">🍅</Link>
         </div>
       </section>
 
@@ -24,7 +25,7 @@ export default function Portfolio() {
               <a href="https://github.com/waleedalfar/trim" target="_blank">The Trim App</a>
               </h3>
             <p className="text-sm text-muted-foreground">
-              Engineered a RESTful backend via FastAPI \& PostgreSQL for efficient management of user accounts and service listings
+              Engineered a RESTful backend via FastAPI &amp; PostgreSQL for efficient management of user accounts and service listings
             </p>
           </div>
           <div className="border p-4 rounded shadow">
