@@ -7,8 +7,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "eslint-config-next": "^16.0.10",
+    "next": "^16.0.10",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.13.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
