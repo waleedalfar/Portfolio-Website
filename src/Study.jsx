@@ -71,7 +71,7 @@ export default function Study() {
 
   const [durations, setDurations] = useState({ work: 25, shortBreak: 5, longBreak: 15 });
   const [phase, setPhase] = useState("work");
-  const [secondsLeft, setSecondsLeft] = useState(25 * 60);
+  const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
   const [sessions, setSessions] = useState(0);
   const [history, setHistory] = useState([]);
@@ -80,44 +80,48 @@ export default function Study() {
   const playChime = useChime();
 
   const totalSec = durations[phase] * 60;
-  const progress = totalSec > 0 ? 1 - secondsLeft / totalSec : 0;
+  const progress = totalSec > 0 ? elapsed / totalSec : 0;
   const cfg = PHASE_CONFIG[phase];
 
-  // Tick
+  // Tick — counts up
   useEffect(() => {
     if (!running) return;
-    intervalRef.current = setInterval(() => setSecondsLeft(s => { if (s <= 1) { clearInterval(intervalRef.current); return 0; } return s - 1; }), 1000);
+    intervalRef.current = setInterval(() => setElapsed(s => {
+      const next = s + 1;
+      if (next >= totalSec) { clearInterval(intervalRef.current); return totalSec; }
+      return next;
+    }), 1000);
     return () => clearInterval(intervalRef.current);
-  }, [running]);
+  }, [running, totalSec]);
 
-  // Phase transition on zero
+  // Phase transition when elapsed reaches target
   useEffect(() => {
-    if (secondsLeft !== 0 || !running) return;
+    if (elapsed < totalSec || !running) return;
     setRunning(false);
     playChime();
     if (phase === "work") {
       const next = sessions + 1;
       setSessions(next);
       setHistory(h => [{ type: "focus", mins: durations.work, time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }, ...h].slice(0, 8));
-      if (next % 4 === 0) { setPhase("longBreak"); setSecondsLeft(durations.longBreak * 60); }
-      else { setPhase("shortBreak"); setSecondsLeft(durations.shortBreak * 60); }
+      if (next % 4 === 0) { setPhase("longBreak"); setElapsed(0); }
+      else { setPhase("shortBreak"); setElapsed(0); }
     } else {
       setHistory(h => [{ type: phase === "shortBreak" ? "short" : "long", mins: durations[phase], time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }, ...h].slice(0, 8));
-      setPhase("work"); setSecondsLeft(durations.work * 60);
+      setPhase("work"); setElapsed(0);
     }
-  }, [secondsLeft, running]);
+  }, [elapsed, running, totalSec]);
 
-  const switchPhase = (p) => { setRunning(false); setPhase(p); setSecondsLeft(durations[p] * 60); };
-  const reset = () => { setRunning(false); setSecondsLeft(durations[phase] * 60); };
+  const switchPhase = (p) => { setRunning(false); setPhase(p); setElapsed(0); };
+  const reset = () => { setRunning(false); setElapsed(0); };
   const adjustTime = (delta) => {
     if (running) return;
     const newMin = Math.max(1, Math.min(90, durations[phase] + delta));
     setDurations(d => ({ ...d, [phase]: newMin }));
-    setSecondsLeft(newMin * 60);
+    setElapsed(0);
   };
 
-  const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
-  const ss = String(secondsLeft % 60).padStart(2, "0");
+  const mm = String(Math.floor(elapsed / 60)).padStart(2, "0");
+  const ss = String(elapsed % 60).padStart(2, "0");
   const totalFocusMins = history.filter(h => h.type === "focus").reduce((a, h) => a + h.mins, 0);
   const dots = Array.from({ length: 4 }, (_, i) => i);
   const q = QUOTES[quoteIdx];
@@ -165,7 +169,7 @@ export default function Study() {
             <button className="time-adj" onClick={() => adjustTime(1)} disabled={running}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
             </button>
-            <span className="t-label">{cfg.label} · {durations[phase]}m</span>
+            <span className="t-label">{cfg.label} · {Math.floor(elapsed / 60)}m / {durations[phase]}m</span>
           </Ring>
         </div>
 
