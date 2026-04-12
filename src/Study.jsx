@@ -69,7 +69,7 @@ export default function Study() {
     longBreak: { label: "Long Break", color: "#818cf8", emoji: "🌿" },
   };
 
-  const [durations, setDurations] = useState({ work: 25, shortBreak: 5, longBreak: 15 });
+  const [durations, setDurations] = useState({ work: 90, shortBreak: 5, longBreak: 15 });
   const [phase, setPhase] = useState("work");
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
