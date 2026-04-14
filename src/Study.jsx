@@ -46,9 +46,8 @@ function Ring({ progress, size = 300, stroke = 5, children, color }) {
 const QUOTES = [
   { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
   { text: "Focus is the art of knowing what to ignore.", author: "James Clear" },
-  { text: "Small daily improvements over time lead to stunning results.", author: "Robin Sharma" },
+  { text: "You may delay, but time will not.", author: "Benjamin Franklin" },
   { text: "It's not that I'm so smart, it's just that I stay with problems longer.", author: "Albert Einstein" },
-  { text: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
   { text: "Discipline is choosing between what you want now and what you want most.", author: "Abraham Lincoln" },
 ];
 
